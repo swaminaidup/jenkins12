@@ -1,0 +1,28 @@
+pipeline
+{
+   agent any
+    stage('hello'){
+    steps
+    {
+    bat 'echo "helloword"'
+    }
+    }
+    stage('test)
+    {
+     steps
+    {
+     input message: 'waiting for approvel from manoj download the code', submitter: 'manoj'
+     git branch: 'main', url: 'https://github.com/prasad250691/nocturnaldevops.git'
+
+       mail bcc: '', body: '', cc: 'projects24882gmail.com', from: '', replyTo: '', subject: 'bulid to perform on a                       project', to: 'manoj@gmail.com'
+
+    }
+    }
+    }
+    past
+    {
+     aborted
+    {
+     bat 'echo "Project Aborted."'
+     }
+}
